@@ -31,5 +31,8 @@ def create_repository(details):
     process = ['gh','repo', 'create', repository_name,visibiliy,'--description', description]
     return process
 
+if __name__ == '__main__':
+    print("Main file started")
+    main()
 
 

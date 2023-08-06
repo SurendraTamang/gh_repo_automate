@@ -20,7 +20,7 @@ def main():
 def create_repository(details):
     organization = details.get('organization',False)
     repository_name = details.get('respository_name')
-    visibiliy = details.get('visibility','--private')
+    visibility = details.get('visibility','--private')
     description = details.get('description',repository_name)
     if organization:
         repository_name = f'{organization}/{repository_name}'
@@ -28,7 +28,7 @@ def create_repository(details):
     if not visibility.startswith('--'):
         visibility = '--'+visibility
     
-    process = ['gh','repo', 'create', repository_name,visibiliy,'--description', description]
+    process = ['gh','repo', 'create', repository_name,visibility,'--description', description]
     return process
 
 if __name__ == '__main__':

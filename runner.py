@@ -10,7 +10,7 @@ def main():
         projects = csv.DictReader(projects_file)
         for project in projects:
             process = create_repository(project)
-            subprocess.run(process, shell=True, check=True)
+            subprocess.run(process, check=True)
 
 
 
